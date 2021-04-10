@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useContext} from "react"
 import {useHttp} from '../hooks/http.hook'
-import {AuthContext} from '../context/auth.context'
+import {AuthContext} from '../context/AuthContext'
 import {useHistory} from 'react-router-dom'
 
 export const CreatePage = () => {

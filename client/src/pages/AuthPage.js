@@ -1,15 +1,13 @@
 import React, {useContext, useEffect, useState} from "react"
-import {useHttp} from "../hooks/http.hook";
-import {useMessage} from "../hooks/message.hook";
-import {AuthContext} from "../context/auth.context";
+import {useHttp} from "../hooks/http.hook"
+import {useMessage} from "../hooks/message.hook"
+import {AuthContext} from "../context/AuthContext"
 
 export const AuthPage = () => {
     const auth = useContext(AuthContext)
     const message = useMessage()
-    const {loading, error, request, clearError} = useHttp()
-    const [form, setForm] =  useState({
-        email: '', password: ''
-    })
+    const {loading, request, error, clearError} = useHttp()
+    const [form, setForm] =  useState({email: '', password: ''})
 
     useEffect(() => {
         message(error)
@@ -53,8 +51,8 @@ export const AuthPage = () => {
                                     type="text"
                                     name="email"
                                     className="yellow-input"
-                                    onChange={changeHandler}
                                     value={form.email}
+                                    onChange={changeHandler}
                                 />
                                     <label htmlFor="email">Email</label>
                             </div>
@@ -68,8 +66,8 @@ export const AuthPage = () => {
                                     type="password"
                                     name="password"
                                     className="yellow-input"
-                                    onChange={changeHandler}
                                     value={form.password}
+                                    onChange={changeHandler}
                                 />
                                 <label htmlFor="password">password</label>
                             </div>
