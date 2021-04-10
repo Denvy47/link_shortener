@@ -1,6 +1,6 @@
 import React, {useContext} from "react"
 import {NavLink, useHistory} from 'react-router-dom'
-import {AuthContext} from '../context/auth.context'
+import {AuthContext} from '../context/AuthContext'
 
 export const Navbar = () => {
     const history = useHistory()
