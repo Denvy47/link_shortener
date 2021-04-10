@@ -4,7 +4,7 @@
   "description": "mongo, express js, node js, react",
   "main": "app.js",
   "scripts": {
-    "start": "cross-env NODE-ENV=pro node app.js",
+    "start": "cross-env NODE-ENV=production node app.js",
     "server": "nodemon app.js",
     "client": "npm run start --prefix client",
     "client:install": "npm install --prefix client",
