@@ -13,7 +13,7 @@ module.exports = (req, res, next) => {
             return res.status(401).json({message: 'No auth'})
         }
 
-        const decoded = jwt.verify(token, config.get(jwtSecret))
+        const decoded = jwt.verify(token, config.get('jwtSecret'))
         req.user = decoded
         next()
     } catch (e) {
