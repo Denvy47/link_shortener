@@ -14,3 +14,7 @@ Hosted on google cloud platform: http://34.121.248.94/
  - Express js
  - React
  - Node js
+
+
+Deploy command: 
+```sudo start.sh```
